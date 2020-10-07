@@ -19,6 +19,7 @@ func (ali *Alidns) Init(conf *config.Config) {
 	if err != nil {
 		log.Println("Alidns链接失败")
 	}
+	client.Scheme = "https"
 	ali.client = client
 
 	ali.Domains.ParseDomain(conf)
